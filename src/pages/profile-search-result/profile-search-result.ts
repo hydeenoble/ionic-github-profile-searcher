@@ -22,7 +22,7 @@ export class ProfileSearchResultPage {
   username: string;
 
   user: User;
-
+  // repository:
   constructor(private githubService: GithubserviceProvider, public navCtrl: NavController, public navParams: NavParams) {
   }
 

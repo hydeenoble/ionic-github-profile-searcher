@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { SearchResultComponent } from './search-result/search-result';
 import { IonicModule} from "ionic-angular";
+import { RepositoriesComponent } from './repositories/repositories';
 
 @NgModule({
-	declarations: [SearchResultComponent],
+	declarations: [SearchResultComponent,
+    RepositoriesComponent],
 	imports: [IonicModule],
-	exports: [SearchResultComponent]
+	exports: [SearchResultComponent,
+    RepositoriesComponent]
 })
 export class ComponentsModule {}

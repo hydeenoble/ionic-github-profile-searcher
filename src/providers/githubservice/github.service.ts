@@ -35,6 +35,13 @@ export class GithubserviceProvider {
       .catch((error) => Observable.throw(error || "Server error."));
   }
 
+  getRepoInfo(username: string): Observable<Repository[]> {
+    return this.http.get(`${this.baseUrl}/${username}/repos`)
+      .do((data) => console.log(data))
+      .map((data) => data)
+      .catch((error) => Observable.throw(error || "Server error."));
+  }
+
   mockGetUserInfo(username: string): Observable<User> {
     return Observable.of(USER_LIST.filter(user => user.name === username)[0])
   }

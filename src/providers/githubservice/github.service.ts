@@ -16,11 +16,11 @@ import { USER_LIST } from '../../mocks/user.mocks';
 @Injectable()
 export class GithubserviceProvider {
 
-  constructor() {
-    console.log('Hello GithubserviceProvider Provider');
-  }
+  // constructor() {
+  //   console.log('Hello GithubserviceProvider Provider');
+  // }
 
-  mockGetUserInfo(username: string): Observable<User> {
+  mockGetUserInfo(username: string) {
     return Observable.of(USER_LIST.filter(user => user.name === username)[0])
   }
 

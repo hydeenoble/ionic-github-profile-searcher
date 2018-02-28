@@ -1,4 +1,9 @@
 <!-- Generated template for the SearchResultComponent component -->
 <ion-item  *ngIf="user" text-wrap>
-  {{ user | json}}
+  <ion-avatar item-left>
+    <img [src]="user.avatar_url" alt="">
+  </ion-avatar>
+  <h2>{{user.name}}</h2>
+  <h3>{{user.company}}</h3>
+  <p>{{user.location}}</p>
 </ion-item>

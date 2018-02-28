@@ -12,6 +12,8 @@ import 'rxjs/add/observable/of';
 */
 import { User } from '../../models/user.interface';
 import { USER_LIST } from '../../mocks/user.mocks';
+import {Repository} from "../../models/repository.interface";
+import {REPOSITORY_LIST} from "../../mocks/repository.mocks";
 
 @Injectable()
 export class GithubserviceProvider {
@@ -24,4 +26,7 @@ export class GithubserviceProvider {
     return Observable.of(USER_LIST.filter(user => user.name === username)[0])
   }
 
+  mockGetRepoInfo(username: string): Observable<Repository[]> {
+    return Observable.of(REPOSITORY_LIST.filter( repositories => repositories.owner.name === username));
+  }
 }

@@ -1,6 +1,6 @@
 import { User } from '../models/user.interface';
 
-const userList: User[] = [
+export const USER_LIST: User[] = [
   {
     name: 'hydeenoble',
     company: 'Terragon Group',
@@ -18,4 +18,3 @@ const userList: User[] = [
   }
 ];
 
-export const USER_LIST = userList;

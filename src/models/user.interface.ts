@@ -1,4 +1,4 @@
-export interface UserInterface{
+export interface User{
   name: string,
   company: string,
   location: string,
